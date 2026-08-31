@@ -1,4 +1,42 @@
 # Titanic Survival Prediction REST API
+## Live Deployment
+
+The API is deployed and publicly accessible on Render.
+
+**Live API:** https://titanic-ml-rest-api.onrender.com
+
+**Swagger API Documentation:** https://titanic-ml-rest-api.onrender.com/docs
+
+## API Endpoint
+
+### POST /predict
+
+The `/predict` endpoint accepts passenger information in JSON format and returns a Titanic survival prediction.
+
+Example request:
+
+```json
+{
+  "pclass": 1,
+  "sex": "female",
+  "age": 25,
+  "sibsp": 0,
+  "parch": 0,
+  "fare": 80,
+  "embarked": "C"
+}
+
+Example response:
+
+{
+  "prediction_id": "example-id",
+  "prediction": 1,
+  "prediction_label": "Survived",
+  "probability": {
+    "did_not_survive": 0.12,
+    "survived": 0.88
+  }
+}
 
 ## Project Overview
 
